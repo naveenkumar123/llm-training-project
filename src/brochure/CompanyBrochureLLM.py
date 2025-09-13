@@ -35,14 +35,14 @@ def get_links_user_prompt(website) -> str:
 
 
 
-def get_links(website: Website) -> List[str]:
+def get_links(website: Website) -> list[str]:
     load_dotenv()
     openai = OpenAI()
     respone = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": get_system_prompt()},
-            {"role": "user", "content": get_links_user_prompt(ed)}  
+            {"role": "user", "content": get_links_user_prompt(website)}  
         ],
         response_format={"type": "json_object"},
     )
@@ -58,8 +58,8 @@ def get_links(website: Website) -> List[str]:
 def get_all_details(url):
     result = "Landing page:\n"
     result += Website(url).get_contents()
-    links = get_links(Website(url)) # This makes a call to the OpenAI API LLM call.
-    for link in links:
+    links_details = get_links(Website(url)) # This makes a call to the OpenAI API LLM call.
+    for link in links_details["links"]:
         result += f"Link type: {link['type']}\n"
         result += Website(link['url']).get_contents()
     return result
@@ -81,7 +81,7 @@ def create_company_brochure(company, url):
     load_dotenv()
     openapi = OpenAI()
     response = openapi.chat.completions.create(
-        mpdel="gpt-4o-mini",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": get_brochure_user_prompt(company, url)}

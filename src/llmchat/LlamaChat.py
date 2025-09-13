@@ -15,9 +15,13 @@ class LlamaChat:
         self.model = model
         load_dotenv(override=True)
 
-    def chat(self, messages):
+    def chat(self, messages, stream: bool = False):
         response = ollama.chat(
             model=self.model,
             messages=messages,
+            stream=stream
         )
-        return response['message'].content
+        if stream:
+            return response
+        else:
+            return response['message'].content

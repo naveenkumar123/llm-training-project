@@ -1,11 +1,11 @@
 
 
-import os
 """
 @author: Naveen N G
 @date: 2024-10-03
 @description: GptChat provides an interface to interact with OpenAI's chat models.
 """
+import os
 from dotenv import load_dotenv
 from openai import OpenAI
 from IPython.display import Markdown, display, update_display
@@ -21,9 +21,13 @@ class GptChat:
             print(f"OpenAI API Key exists and begins {openai_api_key[:8]}")
 
 
-    def chat(self, messages):
+    def chat(self, messages, stream: bool = False):
         response = self.openai.chat.completions.create(
             model=self.model,
             messages=messages,
+            stream=True
         )
-        return response.choices[0].message.content
+        if stream:
+            return response
+        else:
+            return response.choices[0].message.content

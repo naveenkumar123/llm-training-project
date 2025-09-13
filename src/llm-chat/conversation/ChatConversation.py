@@ -1,3 +1,13 @@
+"""
+@author: Naveen N G
+@date: 2024-13-03
+@description: This module facilitates a multi-model, multi-person simulated chat conversation, 
+integrating OpenAI GPT, Ollama Llama, and Gemini models. 
+It loads environment variables, sets up API clients, and defines prompt templates for system and user messages.
+The conversation is iteratively built by invoking each model in turn, updating the shared conversation context,
+and displaying responses in Markdown format.
+"""
+
 import os
 from dotenv import load_dotenv
 from openai import OpenAI

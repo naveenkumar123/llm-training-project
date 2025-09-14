@@ -26,3 +26,18 @@ class LlamaChat:
             return response
         else:
             return response['message'].content
+    
+    def chat_result(self, messages):
+        response = ollama.chat(
+            model=self.model,
+            messages=messages
+        )
+        return response
+    
+    def chat_with_tool(self, messages: list, tools: list = None):
+        response = ollama.chat(
+            model=self.model,
+            messages=messages,
+            tools=tools
+        )
+        return response

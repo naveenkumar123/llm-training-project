@@ -26,7 +26,6 @@ system_prompt = """ You are a helpful assistant in a electonics store, store con
                     Always respond in markdown format, highlights the offers in bild color.
 """ 
 
-
 def conversation_chat(message, chat_history):
 
     local_system_prompt = system_prompt

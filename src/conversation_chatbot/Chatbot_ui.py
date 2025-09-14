@@ -28,7 +28,12 @@ system_prompt = """ You are a helpful assistant in a electonics store, store con
 
 
 def conversation_chat(message, chat_history):
-    messages = [{'role': 'system', 'content': system_prompt}] + chat_history + [{'role': 'user', 'content': message}]
+
+    local_system_prompt = system_prompt
+    if ['battery', 'monitor', 'camera'] in message.lower():
+        local_system_prompt += "Our store only sell Laptops and Phones, please ask about Laptops and Phones only."
+    
+    messages = [{'role': 'system', 'content': local_system_prompt}] + chat_history + [{'role': 'user', 'content': message}]
     
     response = LlamaChat().chat(messages, stream=True)
     result = ''

@@ -1,11 +1,11 @@
 
-
-import os
 """
 @author: Naveen N G
-@date: 2024-10-03
+@date: 10-09-2025
 @description: LlamaChat provides a simple interface for interacting with an Ollama-powered LLM chat model.
 """
+
+import os
 from dotenv import load_dotenv
 from IPython.display import Markdown, display, update_display
 import ollama
@@ -15,11 +15,12 @@ class LlamaChat:
         self.model = model
         load_dotenv(override=True)
 
-    def chat(self, messages, stream: bool = False):
+    def chat(self, messages, stream: bool = False, response_format: str = ''):
         response = ollama.chat(
             model=self.model,
             messages=messages,
-            stream=stream
+            stream=stream,
+            format=response_format
         )
         if stream:
             return response

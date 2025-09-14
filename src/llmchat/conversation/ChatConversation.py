@@ -1,6 +1,6 @@
 """
 @author: Naveen N G
-@date: 2024-13-03
+@date: 10-09-2025
 @description: This module facilitates a multi-model, multi-person simulated chat conversation, 
 integrating OpenAI GPT, Ollama Llama, and Gemini models. 
 It loads environment variables, sets up API clients, and defines prompt templates for system and user messages.

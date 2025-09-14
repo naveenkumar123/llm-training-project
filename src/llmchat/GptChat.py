@@ -2,7 +2,7 @@
 
 """
 @author: Naveen N G
-@date: 2024-10-03
+@date: 10-09-2025
 @description: GptChat provides an interface to interact with OpenAI's chat models.
 """
 import os

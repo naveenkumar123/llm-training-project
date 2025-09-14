@@ -1,3 +1,15 @@
+
+"""
+@author: Naveen N G
+@date: 10-09-2025
+@description: This module provides a utility class `Website` for scraping and representing a webpage.
+It fetches the HTML content of a given URL, extracts the title, visible text, and all hyperlinks.
+Irrelevant HTML elements such as scripts, styles, images, and input fields are removed from the extracted text.
+"""
+
+
+
+
 import os
 import requests
 from typing import List

@@ -3,7 +3,7 @@
 """
 @author: Naveen N G
 @date: 15-09-2025
-@description: This module provides functionality to Image to Digital text using Ollama lama3.2-vision model.. Multi model processing.
+@description: This module provides functionality to Image to Digital text using Ollama llama3.2-vision model.. Multi model processing.
 Usage:
     Run this file directly to launch the Gradio UI for brochure generation.
 """

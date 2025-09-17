@@ -14,6 +14,7 @@ import torch
 
 # Make sure you have submitted the form in the huggingface for the model 'meta-llama/Meta-Llama-3.1-8B' to use, otherwise you get the access deined
 tokenizer = AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3.1-8B', trust_remote_code=True)
+# tokenizer = AutoTokenizer.from_pretrained('microsoft/Phi-3-mini-4k-instruct') # Microsoft phi model 
 
 
 def text_encode_decode():    
@@ -24,7 +25,7 @@ def text_encode_decode():
     print(tokens)
     # Result would be : [128000, 24762, 1268, 279, 9857, 12509, 4375]
     
-    # Note: Ideally, each token holds of 4 characters. lets check below.
+    # Note: Ideally, each token holds of 4 characters in any model. lets check below.
     print(len(text)/len(tokens))
 
     # Decoding the text using tokens

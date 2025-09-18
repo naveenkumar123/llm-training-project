@@ -1,7 +1,7 @@
 """
 @author: Naveen N G
 @date: 18-09-2025
-@description: This module provides functionality to run the huggingface AutoTokenizer using transform library, below examples show how token works.
+@description: This module provides functionality to run the huggingface BitsAndBytesConfig, AutoModelForCausalLM using transform library fro Quantization.
 """
 
 import sys

@@ -11,6 +11,7 @@ from hugging_face_models.Login import login_hf
 from transformers import AutoTokenizer  
 import torch
 
+login_hf() # Loging into huggingface
 
 # Make sure you have submitted the form in the huggingface for the model 'meta-llama/Meta-Llama-3.1-8B' to use, otherwise you get the access deined
 tokenizer = AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3.1-8B', trust_remote_code=True)
@@ -40,8 +41,19 @@ def text_encode_decode():
     # Result would be : ['<|begin_of_text|>', 'Learn', ' how', ' the', ' Token', 'izers', ' works']
 
 
-text_encode_decode()
+# Model have been trained to expect prompts with a particular format that includes system, user and assistant prompts.
+def tokenizer_chat_template():
+    # Note: we change the model here for the chat 
+    tokenizer = AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3.1-8B-Instruct', trust_remote_code=True)
+    messages = [
+        {"role": "system", "content": "You are a helpful assistant"},
+        {"role": "user", "content": "Tell a light-hearted joke for group of IT Architects"}
+    ]
+    result = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    print(result)
 
+# text_encode_decode()
+tokenizer_chat_template()
 
 
 # Use this command to run : python src/hugging_face_models/tokenizer/TextAutotokenizer.py 

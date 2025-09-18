@@ -1,3 +1,10 @@
+
+"""
+@author: Naveen N G
+@date: 17-09-2025
+@description: This module provides functionality to run the huggingface pipline using transform library, these pipline executes text to image module.
+"""
+
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))

@@ -6,6 +6,8 @@
 @description: GptChat provides an interface to interact with OpenAI's chat models.
 """
 import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from dotenv import load_dotenv
 from openai import OpenAI
 from IPython.display import Markdown, display, update_display
@@ -26,7 +28,7 @@ class GptChat:
         response = self.openai.chat.completions.create(
             model=self.model,
             messages=messages,
-            stream=True
+            stream=stream
         )
         if stream:
             return response

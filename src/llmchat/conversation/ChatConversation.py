@@ -27,7 +27,7 @@ openai = OpenAI()
 conversation = ''
 
 def systemPromptMsg(name):
-    return f"Conversation with other 3 persons conversations is about the travel. Continue the conversation based on the other personse response."
+    return f"Conversation with other 3 persons conversations is about the travel. Continue the conversation based on the other persons response."
      
 
 def userPromptMsg(name):
@@ -83,12 +83,12 @@ for i in range(3):
     display(Markdown(f"**Naveen:**\n{gptConversation}\n"))
     conversation += (f"\n{gptConversation}")
 
-    ollamaConversation = callOllama('Basu')
-    display(Markdown(f"**Basu:**\n{ollamaConversation}\n"))
+    ollamaConversation = callOllama('John')
+    display(Markdown(f"**John:**\n{ollamaConversation}\n"))
     conversation += (f"\n{ollamaConversation}")
 
-    geminiConversation = callGemini('Thippa')
-    display(Markdown(f"**Thippa:**\n{geminiConversation}\n"))
+    geminiConversation = callGemini('Hritik')
+    display(Markdown(f"**Hritik:**\n{geminiConversation}\n"))
     conversation += (f"\n{geminiConversation}")
 
     

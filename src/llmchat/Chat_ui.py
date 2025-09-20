@@ -28,11 +28,18 @@ Usage:
     Run this file to launch the Gradio chat UI. The advanced interface allows model selection and markdown responses.
 """
 
+import sys
 import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import gradio as gr
+from dotenv import load_dotenv
 from GptChat import GptChat
 from LlamaChat import LlamaChat
 
+
+
+load_dotenv()
 
 def basic_chat_ui_render(callFunc):
     gr.Interface(fn=callFunc, inputs="textbox", outputs="textbox").launch()

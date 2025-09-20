@@ -43,9 +43,6 @@ def get_system_prompt() -> str:
     Give short, courteous answers, no more than 1 sentence and assume you are providing the real time information.
     Always be accurate. If you don't know the answer, say so."""
    
-    # system_prompt = "You are a helpful assistant for an Airline called FlightAI. "
-    # system_prompt += "Give short, courteous answers, no more than 1 sentence. "
-    # system_prompt += "Always be accurate. If you don't know the answer, say so."
 
     return system_prompt
 

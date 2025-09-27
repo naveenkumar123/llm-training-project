@@ -16,6 +16,7 @@ import glob
 import csv
 
 
+
 current_dir = os.path.dirname(os.path.abspath(__file__))
 load_dotenv()
 
@@ -60,6 +61,7 @@ def get_mobiles_models():
                     index += 1
                 context[modelName + "price"] = model_price_details[:-1]
             context[company_name + ' models'] = models[:-1]
+
 
 def get_assistants_context(message):
     relevant_context = []

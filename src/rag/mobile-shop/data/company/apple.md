@@ -1,65 +1,51 @@
-## Overview
+# Apple Inc. Company Overview
 
-Nokia is a Finnish company with a long legacy in telecommunications and mobile phones. The brand’s mobile phone business has changed hands a few times: Nokia sold its devices division to Microsoft in 2014, after which the Nokia brand for phones was licensed to HMD Global starting in 2016. HMD Global designs and markets Nokia‑branded smartphones and feature phones under license.
+## Introduction
 
----
+**Apple Inc.** is a global technology company headquartered in Cupertino, California. Renowned for its innovative hardware, software, and services, Apple has become one of the most valuable and influential companies in the world.
 
-## Product Portfolio
+## Company Profile
 
-- **Smartphones**: mid‑range and upper mid‑range Android devices, sometimes with emphasis on clean software / near‑stock Android experience, decent build quality, and regular updates.  
-- **Feature Phones / “Originals”**: simpler phones, often revivals of classic Nokia models or more basic phones with limited features, targeted at either nostalgic markets or users wanting basic connectivity.  
-- **“Nostalgia / Retro” models**: e.g. revivals of old classics with updated internals but retaining signature design features.
+- **Founded:** April 1, 1976  
+- **Founders:** Steve Jobs, Steve Wozniak, Ronald Wayne  
+- **Headquarters:** Cupertino, California, United States  
+- **CEO:** Tim Cook (as of 2025)  
+- **Industry:** Consumer Electronics, Software, Digital Services  
+- **Ticker Symbol:** AAPL (NASDAQ)  
 
----
+## Key Products
 
-## Key Features & Differentiators
+- **iPhone** – Flagship smartphone known for its iOS ecosystem and premium design.
+- **Mac** – Line of personal computers including MacBook Air, MacBook Pro, iMac, and Mac Studio.
+- **iPad** – Tablets ranging from standard to Pro models for professionals and creatives.
+- **Apple Watch** – Smartwatch with health, fitness, and connectivity features.
+- **AirPods** – Wireless earbuds and headphones with active noise cancellation.
+- **Apple Vision Pro** – Mixed reality headset (introduced in 2024).
+  
+## Software and Services
 
-- Reputation for durable build quality, reliable hardware.  
-- “Pure Android” or minimal UI customization, often quicker security & OS updates (at least this is a selling point).  
-- Emphasis on essential features rather than always chasing the high‑end specs (in many models).  
-- Nostalgia / heritage plays a role in branding; many users loyal to Nokia name recognition.  
-- Strong in developing markets where feature phones still have demand, or where price / reliability are important.
+- **iOS / macOS / watchOS / iPadOS** – Operating systems for Apple devices.
+- **App Store** – Digital distribution platform for mobile apps.
+- **iCloud** – Cloud storage and synchronization service.
+- **Apple Music, Apple TV+, Apple Arcade, Apple News+** – Subscription-based media and entertainment services.
+- **Apple Pay** – Mobile payment and digital wallet service.
 
----
+## Business Highlights
 
-## Business & History
+- One of the first companies to reach a market capitalization of over **$3 trillion**.
+- Known for its emphasis on **design, privacy, and ecosystem integration**.
+- Strong global brand loyalty and customer satisfaction.
+- Major contributor to supply chain innovation and environmental initiatives.
 
-- Original Nokia mobile division was a global leader through late 1990s / early 2000s. Declined with rise of smartphones and better Android competitors.  
-- In 2014, Microsoft acquired Nokia’s devices & services business. After that, Nokia itself focused more on network infrastructure, licensing, patents, R&D.  
-- HMD Global was founded in 2016; acquired license to use Nokia brand for mobile devices; since then has marketed Nokia phones/feature phones under HMD’s design + license.  
-- The strategy has included both revivals of classic Nokia models and continuing to release contemporary Android phones, often aiming for reliability, decent user experience, and moderate pricing.
+## Recent Developments (as of 2025)
 
----
+- **Apple Vision Pro** continues to expand in enterprise and creative industries.
+- Advancements in AI across Apple’s ecosystem with **on-device intelligence**.
+- Expansion into **healthcare** and **automotive** technology sectors.
+- Continued focus on **environmental sustainability**, aiming for carbon neutrality across all products by 2030.
 
-## Strengths
+## Conclusion
 
-- Strong brand heritage; a lot of goodwill with consumers who remember Nokia’s past quality and durability.  
-- Competitiveness in feature phones and lower/mid‑segments, especially in markets with cost sensitivity.  
-- Lean product lines in many cases; ability to compete on reliability, software updates, and brand trust rather than only on specs.  
-- Nostalgia and iconic designs help with marketing (reviving old models creates buzz).
-
----
-
-## Weaknesses / Challenges
-
-- Difficult to compete at the very high‑end / flagship level vs brands investing heavily in R&D, cameras, AI etc.  
-- Limited differentiation in many hardware specs vs rivals in same price bracket.  
-- Feature phones are a declining category globally; smartphone competition is intense.  
-- Reliance on license model means less control vs full ownership; constraints on how quickly things can evolve.  
-- In some markets, Nokia phones via HMD have less distribution, marketing, or visibility compared to bigger brands.
-
----
-
-## Recent Developments & Market Position
-
-- Nokia / HMD Global had been scaling up, bringing out newer models, reviving retro designs, and attempting to regain share in emerging markets.  
-- However, there has been pullback in certain regions; for example, reduced operations or sales in the U.S. markets due to economic / competitive pressures.  
-- Nokia also continues to be strong in non‑mobile business lines: networking infrastructure, patent licensing, and R&D (these are separate from the phone business per se), which helps overall brand strength and financial stability.
-
----
-
-## Summary
-
-Nokia’s mobile phone business under HMD Global is built around brand heritage, reliable design, clean software, and value for money rather than chasing cutting‑edge specs. Its strength lies in durable hardware, nostalgia, smaller feature phones, and in markets where cost and reliability matter. But it faces heavy competition, constrained differentiation, and challenges in pushing into premium segments or regions dominated by larger players.
+Apple Inc. remains at the forefront of technology innovation, blending hardware, software, and services to deliver seamless user experiences. Its influence on consumer technology and digital lifestyles continues to shape the future of the tech industry.
 
 ---

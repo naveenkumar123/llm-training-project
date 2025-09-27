@@ -72,7 +72,7 @@ def company_list():
     companies = response.get('upcoming')
     for company_info in companies:
         company_name = company_info.get('name')
-        document_url = company_info.get('document_url') or 'Link Not found'
+        document_url = company_info.get('document_url') or ''
         status = company_info.get('status')
         last_date_to_sumit = company_info.get('listing_date') or ''
         bidding_start_date = company_info.get('bidding_start_date') or ''
@@ -130,20 +130,24 @@ def ipo_company_summary(company_name):
     # company_information = document_content(documentUrl)
 
     system_prompt = """
-                    You are a financial analyst specialized in Indian equities (NSE/BSE). Your task is to analyze the company information provided by the user (financial statements, press releases, investor presentations, earnings transcripts, filings, news excerpts, etc.) and produce a concise, factual company summary focused on:
+                    You are a financial analyst specialized in Indian equities (NSE/BSE). Your task is to accurately analyze the company 
+                    information provided by the user (financial statements, press releases, investor presentations, 
+                    earnings transcripts, filings, news excerpts, etc.) and produce a concise, factual company summary focused on:
                     - IPO Details (example:  Bidding start date, Last date to submit, Max price and Min price)
                     - Financial performance
                     - Company growth in percentage
                     - Year-on-year (YoY) growth details
                     - Main products/segments
-                    - Sales details (segment/geography/channel, as available)
+                    - Sales details (segment/geography/channel, as available) \n
+                    If you don't know the details, say so. Do not make anything up if you have not provided with relevant infromation
+
                 """
 
 
     user_prompt = f"You are looking at a company : {company_name}\n"
     user_prompt += f"""
                 Please analyze the provided company information and return:
-                - IPO Details
+                - IPO Details table
                 - Company Fincaincial details
                 - Financial Performance table
                 - Growth Analysis (YoY, QoQ if quarterly, and 3Y/5Y CAGR if data allows)
@@ -152,16 +156,19 @@ def ipo_company_summary(company_name):
                 - Profitability & Balance Sheet Highlights
                 - Outlook/Guidance and Risks
                 - Data Sources and Notes
-                - Highlight the IPO submition document Link (example : Here is the IPO document link which is submitted to NSE/BSE: 'https://localhost:8000/document.pdf')
+                - Highlight the IPO submition document Link if it is available (example : Here is the IPO document link which is submitted to NSE/BSE: 'https://localhost:8000/document.pdf')
                 - Do not mention the Note about system prompt.
 
                 Assume INR crore, prefer consolidated figures, and follow the calculation and rounding rules provided in the system prompt \n
                 Here is the IPO Details: \n
                 Bidding start date : {company_info.get('bidding_start_date')}, Last date to submit: {company_info.get('last_date_to_sumit')}, 
                 Max price : {company_info.get('max_price')}, Min price:  {company_info.get('min_price')} \n\n
-                Below is the company document link provided to the NSE/BSE for company's complete Information.\n\n
-                {documentUrl}
+                
             """
+
+    if documentUrl:
+        user_prompt += f"""Below is the company document link provided to the NSE/BSE for company's complete Information.\n\n
+                        {documentUrl}"""
     
     messages = [
         { "role" : "system", "content": system_prompt },

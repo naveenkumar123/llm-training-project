@@ -137,8 +137,7 @@ def render_db_visualize():
     vector_databse = create_vector_database(chunks)
     collection = vector_databse._collection
     result = collection.get(include=['embeddings', 'documents', 'metadatas'])
-    perplexity = len(chunks)-5
-    visulaize_vectore_store(result, perplexity, '3D')
+    visulaize_vectore_store(result, 40, '3D')
 
 # render_db_visualize()
 

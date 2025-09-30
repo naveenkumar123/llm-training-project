@@ -12,6 +12,7 @@ from mobile_shop.longchain_vector_db import get_shop_vector_data_store
 from langchain_ollama import ChatOllama
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
+from langchain_core.callbacks import StdOutCallbackHandler
 
 
 def create_rag_pipline():
@@ -23,10 +24,10 @@ def create_rag_pipline():
 
    # the retriever is an abstraction over the VectorStore that will be used during RAG
     vectorstore = get_shop_vector_data_store()
-    retriever = vectorstore.as_retriever()
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 149})
 
     # putting it all together, set up the conversation chain
-    conversation_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever, memory=memory)
+    conversation_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever, memory=memory, callbacks=[StdOutCallbackHandler()])
 
     return conversation_chain
 

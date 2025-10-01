@@ -12,12 +12,10 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from dotenv import load_dotenv
-from hugging_face_models.Login import login_hf
-from datasets import load_dataset, Dataset, DatasetDict
 import matplotlib.pyplot as plt
 
 load_dotenv()
-login_hf()
+
 
 from data_curate import DataCurate
 from upload_dataset import UploadDataset
@@ -33,7 +31,6 @@ from upload_dataset import UploadDataset
 
 
 class DataVisualize:
-
 
     def data_investigate(self, dataset):
         datapoint = dataset[2]
@@ -89,10 +86,10 @@ class DataVisualize:
 
 
 
-# def data_investigate(dataset):
-#     dataVisualize = DataVisualize()
-#     lengths, prices = dataVisualize.data_investigate(dataset)
-#     dataVisualize.data_visualise(lengths, prices)
+def data_investigate(dataset):
+    dataVisualize = DataVisualize()
+    lengths, prices = dataVisualize.data_investigate(dataset)
+    dataVisualize.data_visualise(lengths, prices)
 
 def data_curate():
     dDataCurate = DataCurate()
@@ -100,8 +97,8 @@ def data_curate():
     sample = items
     tokens = [item.token_count for item in items]
     prices = [item.price for item in items]
-    # dataVisualize = DataVisualize()
-    # dataVisualize.data_visualise(tokens, prices)
+    dataVisualize = DataVisualize()
+    dataVisualize.data_visualise(tokens, prices)
     upload_dataset(sample)
 
 def upload_dataset(items):
@@ -112,4 +109,4 @@ if __name__ == "__main__":
     
 
 
-# Use this command to run : python src/model_training/product_price_estimate/data_visualize.py 
+# Use this command to run : python src/model_tuning/product_price_estimate/data_visualize.py 

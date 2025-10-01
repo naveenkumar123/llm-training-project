@@ -6,7 +6,6 @@
 
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from dotenv import load_dotenv
 from datasets import Dataset, DatasetDict
 from hugging_face_models.Login import login_hf
@@ -15,6 +14,9 @@ import pickle
 
 load_dotenv()
 login_hf()
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
 
 class UploadDataset:
 
@@ -49,8 +51,8 @@ class UploadDataset:
         dataset.push_to_hub(DATASET_NAME, private=True)
 
         # Let's pickle the training and test dataset so we don't have to execute all this code next time!
-        with open('train.pkl', 'wb') as file:
+        with open(f'{current_dir}/train.pkl', 'wb') as file:
             pickle.dump(train, file)
 
-        with open('test.pkl', 'wb') as file:
+        with open(f'{current_dir}/test.pkl', 'wb') as file:
             pickle.dump(test, file)

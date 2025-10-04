@@ -3,9 +3,16 @@
 
 
 # pip install transformers==4.48.3 datasets==3.2.0
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from dotenv import load_dotenv
 from huggingface_hub import login
-hf_token = ''
+
+
+load_dotenv()
 
 
 def login_hf():
-    login(hf_token)
+    HUGGING_FACE_TOKEN = os.getenv('HUGGING_FACE_TOKEN')
+    login(HUGGING_FACE_TOKEN)

@@ -8,7 +8,7 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import gradio as gr
-from mobile_shop.longchain_vector_db import get_shop_vector_data_store
+from mobile_shop.langchain_vector_db import get_shop_vector_data_store
 from langchain_ollama import ChatOllama
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain

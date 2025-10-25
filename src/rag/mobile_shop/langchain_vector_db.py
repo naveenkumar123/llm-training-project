@@ -142,4 +142,4 @@ def render_db_visualize():
 # render_db_visualize()
 
 # Uncomment the above code to run this to visualize the vector database 2D and 3D diagram. Make sure, you comment the above code when you run the mobile_shop_rag_pipeline
-# Use this command to run : python src/rag/mobile_shop/longchain_vector_db.py 
+# Use this command to run : python src/rag/mobile_shop/langchain_vector_db.py 
